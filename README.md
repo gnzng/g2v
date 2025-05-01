@@ -22,11 +22,18 @@ g2v is a software tool designed to provide an intuitive and efficient way to vis
     pip install -e .
     ```
 
+`pip install g2v` pending.
+
+
 ## Usage
 
 ### Streamlit client
 
 1. Start the streamlit client:
+    ```bash
+    g2v
+    ```
+    or
     ```bash
     streamlit run g2v/app.py 
     ```

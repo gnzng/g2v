@@ -127,14 +127,14 @@ def render_selection_panel():
             value=roi_manager.current_selection[0],
             key="min_row",
             on_change=update_current_selection,
-            step=10,
+            step=100,
         )
         st.number_input(
             "Max Row",
             value=roi_manager.current_selection[1],
             key="max_row",
             on_change=update_current_selection,
-            step=10,
+            step=100,
         )
     with right_col:
         st.number_input(
@@ -142,14 +142,14 @@ def render_selection_panel():
             value=roi_manager.current_selection[2],
             key="min_col",
             on_change=update_current_selection,
-            step=10,
+            step=100,
         )
         st.number_input(
             "Max Column",
             value=roi_manager.current_selection[3],
             key="max_col",
             on_change=update_current_selection,
-            step=10,
+            step=100,
         )
 
     # Selection info
