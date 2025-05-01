@@ -121,10 +121,13 @@ def make_test_h5file(filename="test.h5"):
     mean_detector_image += 5 * gaussian_center
 
     # Lower precision for the g2 cube data as well
-    compressed_g2cube = np.random.rand(10, 2048, 2048).astype(dtype)
+    compressed_g2cube = np.random.rand(5, 2048, 2048).astype(dtype)
+
+    # random boolean mask to simulate dead pixel or more advanced masking
+    mask = np.random.rand(2048, 2048) > 0.1
 
     # Tau values likely need at least float32 for accuracy in logarithmic spacing
-    tau_log = np.logspace(0, 3, num=10).astype(np.float32)
+    tau_log = np.logspace(0, 3, num=5).astype(np.float32)
     tau_unit = "s"
 
     # Create a highly optimized HDF5 file
@@ -149,6 +152,12 @@ def make_test_h5file(filename="test.h5"):
         f.create_dataset(
             "Detector_Image",
             data=mean_detector_image,
+            chunks=(256, 256),  # Chunk size optimized for compression
+            **compression_kwargs,
+        )
+        f.create_dataset(
+            "Mask",
+            data=mask,
             chunks=(256, 256),  # Chunk size optimized for compression
             **compression_kwargs,
         )
