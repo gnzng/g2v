@@ -1,0 +1,48 @@
+[project]
+name = "g2v"
+version = "0.1.0"
+description = "Mapping correlation to individual pixel clusters in XPCS."
+readme = "README.md"
+authors = [
+    {name = "Damian Guenzing", email = "dguenzing@lbl.gov"}
+]
+maintainers = [
+    {name = "Damian Guenzing", email = "dguenzing@lbl.gov"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+license = "MIT"
+dependencies = [
+    "numpy",
+    "pandas",
+    "h5py",
+    "streamlit",
+    "plotly",
+    "loguru",
+    "pyzmq"
+]
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme"
+]
+test = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "pytest-mock",
+    "pytest-asyncio"
+]
+
+[project.urls]
+bugs = "https://github.com/lbl-camera/correlation_mapper/issues"
+changelog = "https://github.com/lbl-camera/correlation_mapper/blob/master/changelog.md"
+homepage = "https://github.com/lbl-camera/correlation_mapper"
+
+[tool.setuptools]
+packages = ["g2v"]
+
+[project.scripts]
+g2v = "g2v.cli:main"
