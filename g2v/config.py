@@ -32,6 +32,5 @@ LINE_COLORS = [color.replace("0.8", "1.0") for color in COLORS]
 # Default selection values
 DEFAULT_SELECTION = (0, 10, 0, 10)  # (min_row, max_row, min_col, max_col)
 
-
 # Page layout configuration
 PAGE_CONFIG = {"layout": "wide", "page_title": "g2v", "page_icon": "🔎"}

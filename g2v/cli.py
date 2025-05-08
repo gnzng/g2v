@@ -1,3 +1,4 @@
+"""CLI entry point for the Streamlit app. Makes it easy to run the app from the command line as g2v."""
 import sys
 import os
 import streamlit.web.cli as stcli

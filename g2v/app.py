@@ -12,6 +12,7 @@ import h5py
 
 # Initialize session state
 def initialize_session_state():
+    """Initialize session state variables."""
     if "roi_manager" not in st.session_state:
         # Initialize ROIManager with default image dimensions
         st.session_state.roi_manager = ROIManager(1024, 1024)
@@ -23,6 +24,7 @@ def initialize_session_state():
 
 # Update current ROI selection based on input values
 def update_current_selection():
+    """Update the current selection in the ROI manager."""
     roi_manager = st.session_state.roi_manager
     roi_manager.update_current_selection(
         st.session_state.min_row,
@@ -34,6 +36,7 @@ def update_current_selection():
 
 # Render the image panel (left column)
 def render_image_panel():
+    """Render the image panel with heatmap and selection controls."""
     roi_manager = st.session_state.roi_manager
 
     # Color scaling controls
@@ -115,6 +118,7 @@ def render_image_panel():
 
 # Render the selection panel (middle column)
 def render_selection_panel():
+    """Render the selection panel with ROI selection controls with buttons."""
     roi_manager = st.session_state.roi_manager
 
     st.write("### Selection Parameters")
@@ -189,6 +193,7 @@ def render_selection_panel():
 
 # Render the plot panel (right column)
 def render_plot_panel():
+    """Render the plot panel with line chart and download options for different files."""
     roi_manager = st.session_state.roi_manager
 
     colline1, colline2 = st.columns(2)
@@ -255,6 +260,7 @@ def render_plot_panel():
 
 # Render file upload mode UI
 def render_file_upload_mode():
+    """Render the file upload mode UI and save the data to session state."""
     col1, col2 = st.columns(2)
     with col1:
         uploaded_file = st.file_uploader("Upload a file (optional)", type=["h5"])
@@ -281,6 +287,7 @@ def render_file_upload_mode():
 
 # Main application function
 def main():
+    """Main function to run the Streamlit app."""
     # Configure the page
     st.set_page_config(**PAGE_CONFIG)
 
