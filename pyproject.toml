@@ -1,7 +1,11 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "g2v"
-version = "0.1.0"
-description = "Mapping correlation to individual pixel clusters in XPCS."
+version = "0.1.1"
+description = "Viewing XPCS g2 curves in a web interface."
 readme = "README.md"
 authors = [
     {name = "Damian Guenzing", email = "dguenzing@lbl.gov"}
@@ -37,9 +41,9 @@ test = [
 ]
 
 [project.urls]
-bugs = "https://github.com/lbl-camera/correlation_mapper/issues"
-changelog = "https://github.com/lbl-camera/correlation_mapper/blob/master/changelog.md"
-homepage = "https://github.com/lbl-camera/correlation_mapper"
+bugs = "https://github.com/gnzng/g2v/issues"
+changelog = "https://github.com/gnzng/g2v/blob/master/changelog.md"
+homepage = "https://github.com/gnzng/g2v"
 
 [tool.setuptools]
 packages = ["g2v"]
