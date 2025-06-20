@@ -9,6 +9,16 @@ g2v is a software tool designed to provide an intuitive and efficient way to vis
 
 ## Installation
 
+### Install latest from pypi
+
+Easiest way to install using pip:
+
+```bash
+pip install g2v
+```
+
+### Install editable version
+
 1. Clone the repository:
     ```bash
     git clone https://github.com/gnzng/g2v.git
@@ -17,12 +27,10 @@ g2v is a software tool designed to provide an intuitive and efficient way to vis
     ```bash
     cd g2v
     ```
-3. Install dependencies:
+3. Install in editable mode:
     ```bash
     pip install -e .
     ```
-
-`pip install g2v` pending.
 
 
 ## Usage
