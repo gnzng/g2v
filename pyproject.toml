@@ -25,7 +25,6 @@ dependencies = [
     "streamlit",
     "plotly",
     "loguru",
-    "pyzmq"
 ]
 
 [project.optional-dependencies]
