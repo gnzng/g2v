@@ -50,3 +50,9 @@ packages = ["g2v"]
 
 [project.scripts]
 g2v = "g2v.cli:main"
+
+[compatibility]
+# Set the desired Python version.
+# Streamlit Cloud supports Python 3.8, 3.9, 3.10, 3.11, and 3.12.
+# Choose a version that is compatible with all your dependencies.
+python_version = "3.10" # Or "3.9", "3.11", "3.12"
